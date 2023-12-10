@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@media (max-width: 768px) {
+  /* Estilos para pantallas pequeñas */
+}
+
+/* Estilos para pantalla vertical (retrato) */
+@media screen and (orientation: portrait) {
+  body {
+    /* Estilos para pantalla vertical aquí */
+    transform: rotate(90deg);
+  }
+}
+
+/* Estilos para pantalla horizontal (paisaje) */
+@media screen and (orientation: landscape) {
+  body {
+    /* Estilos para pantalla horizontal aquí */
+    margin: 0;
+    font-size: 30px;
+    
+  }
+}
+
+
+body, html  {
+  display: flex;
+  justify-content: center;
+  background-image: url("img/paisaje3.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+
+.wrapper {
+  padding: 10px 70px;
+  border-radius: 20px;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Ajusta el ancho y otros estilos que desees */
+}
+
+.wrapper header {
+  display: flex;
+  color: #0f0e0e;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px; /* Espacio entre elementos */
+}
+
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.19rem;
+}
+
+header input {
+  outline: none;
+  border-radius: 30px;
+}
+
+.volume-slider input {
+  accent-color: #fff;
+}
+
+.keys-checkbox input {
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #4b4b4b;
+}
+.piano2{
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  padding: 0;
+}
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8c8c8c;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys .red {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#f80303 96%, #b90303 4%);
+}
+
+.piano-keys .red.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ff2e2e 0%, #eee 100%);
+}
+
+.piano-keys .brown {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#c28f03 96%, #ddb5039c 4%);
+}
+
+.piano-keys .brown.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #c49104 0%, #eee 100%);
+}
+
+.piano-keys .yelow {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#c7ca0d 96%, #f1f509af 4%);
+}
+
+.piano-keys .yelow.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fbff11 0%, #eee 100%);
+}
+
+.piano-keys .green {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#02fa2c 96%, #33e407bd 4%);
+}
+
+.piano-keys .green.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #09f015 0%, #eee 100%);
+}
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #a2a2a2;
+  font-size: 1.13rem;
+  text-align: center;
+}
+
+.piano-keys .blue {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#02b9f1 96%, #0daaf3cc 4%);
+}
+
+.piano-keys .blue.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #18d6f7 0%, #eee 100%);
+}
+
+.piano-keys .blue2 {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#0212f1 96%, #4408e9a6 4%);
+}
+
+.piano-keys .blue2.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #460aeb 0%, #eee 100%);
+}
+
+.piano-keys .purple {
+  height: 230px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fc07fc 96%, #fa14dba2 4%);
+}
+
+.piano-keys .purple.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fa31be 0%, #eee 100%);
+  
+}
+.piano-keys .key.hide span {
+  display: none;
+}
+
+.piano-keys .black span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .red span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .brown span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .yelow span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .green span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .blue span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .blue2 span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+.piano-keys .purple span {
+  bottom: 13px;
+  color: #f5f2f2;
+}
+
+@media screen and (max-width: 815px) {
+  .wrapper {
+    padding: 25px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header :where(h2, .column) {
+    margin-bottom: 13px;
+  }
+
+  .volume-slider input {
+    max-width: 100px;
+  }
+
+  .piano-keys {
+    margin-top: 20px;
+  }
+
+  .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+    display: none;
+  }
+
+  .piano-keys .black {
+    height: 100px;
+    width: 40px;
+    margin: 0 -20px 0 -20px;
+  }
+
+  .piano-keys .white {
+    height: 180px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .piano-keys .key:nth-child(13),
+  .piano-keys .key:nth-child(14),
+  .piano-keys .key:nth-child(15),
+  .piano-keys .key:nth-child(16),
+  .piano-keys .key :nth-child(17) {
+    display: none;
+  }
+  
+  .piano-keys .white {
+    width: 50px;
+  }
+}
+
+
+
+#my_bpm_input {
+  background-color: yellow;
+  font-size: 20px;
+  text-align: center;
+  width: 60px;
+  border-radius: 1px;
+}
+
+#my_play_button {
+  background-color: lightgreen;
+  text-align: center;
+  width: 60px;
+  font-size: 20px;
+}
+
+#my_volume_input {
+  font-size: 0px;
+  width: 0px;
+  background-color: #141414;
+}
+
+.increment {
+  font-size: 16px;
+  width: 70px;
+  height: 40px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+#my_tap_pad {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+
+.plus_minus {
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  padding: 0;
+}
+
+
+h1 {
+  font-weight: normal;
+  font-size: 20px;
+}
